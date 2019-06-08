@@ -1,0 +1,216 @@
+// https://maps.googleapis.com/maps/api/place/autocomplete/json?input=%EB%82%9C%EA%B3%A1&key=AIzaSyBNlPmD46JwwYiU9LTw7pyHgUuV7sKTKF4
+
+{
+   "predictions" : [
+      {
+         "description" : "서울특별시 미성동 난곡사거리",
+         "id" : "8f1ff7819e42012322404e36f4220bc9759916df",
+         "matched_substrings" : [
+            {
+               "length" : 2,
+               "offset" : 10
+            }
+         ],
+         "place_id" : "ChIJEwWwRMyffDURVHLw-0gH5eg",
+         "reference" : "ChIJEwWwRMyffDURVHLw-0gH5eg",
+         "structured_formatting" : {
+            "main_text" : "난곡사거리",
+            "main_text_matched_substrings" : [
+               {
+                  "length" : 2,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "서울특별시 미성동"
+         },
+         "terms" : [
+            {
+               "offset" : 10,
+               "value" : "난곡사거리"
+            },
+            {
+               "offset" : 6,
+               "value" : "미성동"
+            },
+            {
+               "offset" : 0,
+               "value" : "서울특별시"
+            }
+         ],
+         "types" : [ "geocode" ]
+      },
+      {
+         "description" : "대한민국 서울특별시 관악구 난곡동",
+         "id" : "bd523d7955eb860d93241186afa75b13e5469700",
+         "matched_substrings" : [
+            {
+               "length" : 2,
+               "offset" : 15
+            }
+         ],
+         "place_id" : "ChIJH898u9effDURiWIhbvlmJ8Q",
+         "reference" : "ChIJH898u9effDURiWIhbvlmJ8Q",
+         "structured_formatting" : {
+            "main_text" : "관악구 난곡동",
+            "main_text_matched_substrings" : [
+               {
+                  "length" : 2,
+                  "offset" : 4
+               }
+            ],
+            "secondary_text" : "대한민국 서울특별시"
+         },
+         "terms" : [
+            {
+               "offset" : 15,
+               "value" : "난곡동"
+            },
+            {
+               "offset" : 11,
+               "value" : "관악구"
+            },
+            {
+               "offset" : 5,
+               "value" : "서울특별시"
+            },
+            {
+               "offset" : 0,
+               "value" : "대한민국"
+            }
+         ],
+         "types" : [ "sublocality_level_2", "sublocality", "political", "geocode" ]
+      },
+      {
+         "description" : "대한민국 서울특별시 관악구 신림동 난곡로",
+         "id" : "a2dd9b3f6662f2e54071faae64194d7323337c77",
+         "matched_substrings" : [
+            {
+               "length" : 2,
+               "offset" : 19
+            }
+         ],
+         "place_id" : "ChIJz1gjrdaffDURrLFsjRsWP_Q",
+         "reference" : "ChIJz1gjrdaffDURrLFsjRsWP_Q",
+         "structured_formatting" : {
+            "main_text" : "관악구 신림동 난곡로",
+            "main_text_matched_substrings" : [
+               {
+                  "length" : 2,
+                  "offset" : 8
+               }
+            ],
+            "secondary_text" : "대한민국 서울특별시"
+         },
+         "terms" : [
+            {
+               "offset" : 19,
+               "value" : "난곡로"
+            },
+            {
+               "offset" : 15,
+               "value" : "신림동"
+            },
+            {
+               "offset" : 11,
+               "value" : "관악구"
+            },
+            {
+               "offset" : 5,
+               "value" : "서울특별시"
+            },
+            {
+               "offset" : 0,
+               "value" : "대한민국"
+            }
+         ],
+         "types" : [ "sublocality_level_4", "sublocality", "political", "geocode" ]
+      },
+      {
+         "description" : "대한민국 서울특별시 미성동 난곡신일교회",
+         "id" : "800703aa201ec44d271ee6c31fefe42e55cacfcf",
+         "matched_substrings" : [
+            {
+               "length" : 2,
+               "offset" : 15
+            }
+         ],
+         "place_id" : "ChIJTeD4CdGffDURYc4z6JOFzTk",
+         "reference" : "ChIJTeD4CdGffDURYc4z6JOFzTk",
+         "structured_formatting" : {
+            "main_text" : "난곡신일교회",
+            "main_text_matched_substrings" : [
+               {
+                  "length" : 2,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "대한민국 서울특별시 미성동"
+         },
+         "terms" : [
+            {
+               "offset" : 15,
+               "value" : "난곡신일교회"
+            },
+            {
+               "offset" : 11,
+               "value" : "미성동"
+            },
+            {
+               "offset" : 5,
+               "value" : "서울특별시"
+            },
+            {
+               "offset" : 0,
+               "value" : "대한민국"
+            }
+         ],
+         "types" : [ "church", "place_of_worship", "point_of_interest", "establishment" ]
+      },
+      {
+         "description" : "대한민국 서울특별시 관악구 신림동 난곡터널",
+         "id" : "3d6ff464515659d49ab6dd4108a92b1d27e77785",
+         "matched_substrings" : [
+            {
+               "length" : 2,
+               "offset" : 19
+            }
+         ],
+         "place_id" : "ChIJGXD4hsWffDUR7b2bLfAqHEw",
+         "reference" : "ChIJGXD4hsWffDUR7b2bLfAqHEw",
+         "structured_formatting" : {
+            "main_text" : "난곡터널",
+            "main_text_matched_substrings" : [
+               {
+                  "length" : 2,
+                  "offset" : 0
+               }
+            ],
+            "secondary_text" : "대한민국 서울특별시 관악구 신림동"
+         },
+         "terms" : [
+            {
+               "offset" : 19,
+               "value" : "난곡터널"
+            },
+            {
+               "offset" : 15,
+               "value" : "신림동"
+            },
+            {
+               "offset" : 11,
+               "value" : "관악구"
+            },
+            {
+               "offset" : 5,
+               "value" : "서울특별시"
+            },
+            {
+               "offset" : 0,
+               "value" : "대한민국"
+            }
+         ],
+         "types" : [ "point_of_interest", "establishment" ]
+      }
+   ],
+   "status" : "OK"
+}

@@ -1,27 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:google_maps_flutter/google_maps_flutter.dart';
-import 'package:finding_route/ui/appbar/appbar.dart';
+import 'package:finding_route/ui/common/appbar.dart';
 
-class HomePage extends StatefulWidget {
-  @override
-  _HomePageState createState() => _HomePageState();
-}
-
-class _HomePageState extends State<HomePage> {
-  GoogleMapController mapController;
-
-  final LatLng _center = const LatLng(37.49243, 127.03101);
-
-  void _onMapCreated(GoogleMapController controller) {
-    mapController = controller;
-  }
+import 'package:finding_route/util/mapUtil.dart';
+class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Finding Route'),
-      ),
+      // appBar: AppBar(
+      //   title: Text('Finding Route'),
+      // ),
       drawer: Drawer(
         child: ListView(
           padding: EdgeInsets.zero,
@@ -55,125 +43,13 @@ class _HomePageState extends State<HomePage> {
       ),
       body: Stack(
         children: <Widget>[
-          GoogleMap(
-            onMapCreated: _onMapCreated,
-            myLocationEnabled: true,
-            initialCameraPosition: CameraPosition(
-              target: _center,
-              zoom: 13.0,
-            ),
-          ),
-          SizedBox(
-            height: 50,
-            width: 200,
-            child: RaisedButton(
-              onPressed: () {
-                Navigator.pushNamed(context, '/search');
-              },
-              child: Text(
-                'search',
-                style: TextStyle(fontSize: 20)
-              )
-            ),
-          ),
-          // Container(
-          //   alignment: Alignment.topCenter,
-          //   child: RaisedButton(
-          //     onPressed: null,
-          //     child: Container(
-          //       decoration: BoxDecoration(
-          //         border: Border.all(width: 28.0, color: Colors.red)
-          //       ),
-          //       child: Text('data'),
-          //     ),
-          //   ),
-          // ),
+          MapUtil(),
+          MainAppBar(),
+          // mainAppBar(context)
         ],
       ),
-      
-      
-      // Column(
-      //   children: <Widget>[
-      //     Flexible(
-      //       flex:1,
-      //       child: Stack(
-      //         children: <Widget>[
-      //           RaisedButton(
-      //             onPressed: null,
-      //             child: Container(
-      //               decoration: BoxDecoration(
-      //                 border: Border.all(width: 28.0, color: Colors.red)
-      //               ),
-      //               child: Text('data'),
-      //             ),
-      //           )
-      //         ],
-      //       ),
-      //     ),
-      //     Flexible(
-      //       flex: 6,
-      //       // child: Center(
-      //       //   child: Text('임시'),
-      //       // ),
-      //       child: GoogleMap(
-      //         onMapCreated: _onMapCreated,
-      //         myLocationEnabled: true,
-      //         initialCameraPosition: CameraPosition(
-      //           target: _center,
-      //           zoom: 13.0,
-      //         ),
-      //       ),
-      //     ),
-      //   ],
-      // ),
-      // body: Column(
-      //   children: <Widget>[
-      //     Flexible(
-      //       flex: 1,
-      //       child: Row(
-      //         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-      //         children: <Widget>[
-      //           Column(
-      //             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-      //             children: <Widget>[
-      //               MyRow(subject: '출발지',),
-      //               MyRow(subject: '목적지',),
-      //               MyRow(subject: '도착시간',)
-      //             ]
-      //           ),
-      //           Column(
-      //             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-      //             children: <Widget>[
-      //               Row(
-      //                 children: <Widget>[Text('data')],
-      //               ),
-      //               Row(
-      //                 children: <Widget>[Text('data')],
-      //               ),
-      //               Row(
-      //                 children: <Widget>[Text('data')],
-      //               )
-      //             ],
-      //           ),
-      //         ],
-      //       )
-      //     ),
-      //     Flexible(
-      //       flex: 6,
-      //       child: GoogleMap(
-      //         onMapCreated: _onMapCreated,
-      //         myLocationEnabled: true,
-      //         initialCameraPosition: CameraPosition(
-      //           target: _center,
-      //           zoom: 13.0,
-      //         ),
-      //       ),
-      //     ),
-      //   ],
-      // ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-         
         },
         tooltip: '현재 위치',
         child: Icon(Icons.person_pin_circle),
@@ -182,22 +58,59 @@ class _HomePageState extends State<HomePage> {
   }
 }
 
-class MyRow extends StatelessWidget {
-  const MyRow({Key key, this.subject}) : super(key: key);
-  final String subject;
+// Widget mainAppBar(context) {
+//   return Container(
+//       height: 80,
+//       // decoration: BoxDecoration(color: Colors.blue),
+//       child: Center(
+//         child: Container(
+//           margin: EdgeInsets.fromLTRB(20, 25, 20, 0),
+//           decoration: BoxDecoration(
+//             color: Colors.white,
+//             borderRadius: BorderRadius.all(Radius.circular(15))
+//           ),
+//           padding: EdgeInsets.symmetric(horizontal: 10, vertical: 0), 
+//           child: Row(
+//             // crossAxisAlignment: CrossAxisAlignment.baseline,
+//             // verticalDirection: VerticalDirection.up,
+//             // mainAxisAlignment: MainAxisAlignment.start,
+//             children: <Widget>[
+//               IconButton(
+//                 iconSize: 25,
+//                 icon: Icon(Icons.menu),
+//                 onPressed: () {
+//                   BuildContext
+//                   Scaffold.of(context).openDrawer();
+//                 },
+//               ),
+//               Container(
+//                 child:Row(
+//                   children: <Widget>[
+//                     Icon(
+//                       Icons.map
+//                     ),
+//                     Text('주소검색'),
+//                     // Icon
 
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      children: <Widget>[
-        Icon(Icons.ac_unit),
-        Container(
-          child: Text(subject),
-          height: 28.0,
-          // color: Colors.grey,
-          decoration: BoxDecoration(color: Colors.red),
-        )
-      ],
-    );
-  }
-}
+//                   ],
+//                 ),
+//                 decoration: BoxDecoration(
+//                   // color: Colors.red,
+//                 ),
+//                 width: 219,
+//               ),
+//               IconButton(
+//                 iconSize: 25,
+//                 icon: Icon(Icons.arrow_drop_down),
+//                 onPressed: () {
+//                   print(context);
+//                   Navigator.pushNamed(context, '/search');
+//                 },
+//               ),
+              
+//             ],
+//           )
+//         )
+//       ),
+//     );
+// }
