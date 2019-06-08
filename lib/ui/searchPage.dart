@@ -53,7 +53,7 @@ class InputForm extends StatefulWidget {
 // class _InputFormState extends State<InputForm> implements GooglePlacesListener{
 class _InputFormState extends State<InputForm> {
 
-  GoogleMapsPlaces googleMapsPlaces = new GoogleMapsPlaces(apiKey: 'AIzaSyBNlPmD46JwwYiU9LTw7pyHgUuV7sKTKF4');
+  GoogleMapsPlaces googleMapsPlaces = new GoogleMapsPlaces(apiKey: 'my_api_key');
 
   final _startPositionController = TextEditingController();
   final _endPositionController = TextEditingController();

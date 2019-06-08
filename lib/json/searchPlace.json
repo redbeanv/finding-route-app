@@ -1,4 +1,4 @@
-// https://maps.googleapis.com/maps/api/place/autocomplete/json?input=%EB%82%9C%EA%B3%A1&key=AIzaSyBNlPmD46JwwYiU9LTw7pyHgUuV7sKTKF4
+// https://maps.googleapis.com/maps/api/place/autocomplete/json?input=%EB%82%9C%EA%B3%A1&key=my_api_key
 
 {
    "predictions" : [

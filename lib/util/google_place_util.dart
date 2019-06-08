@@ -9,7 +9,7 @@
 //   final homeScaffoldKey = new GlobalKey<ScaffoldState>();
 //   final searchScaffoldKey = new GlobalKey<ScaffoldState>();
 //   GoogleMapsPlaces _places =
-//       new GoogleMapsPlaces(apiKey: 'AIzaSyBNlPmD46JwwYiU9LTw7pyHgUuV7sKTKF4');
+//       new GoogleMapsPlaces(apiKey: 'my_api_key');
 //   Location location;
 //   GooglePlacesListener _mapScreenState;
 
@@ -19,7 +19,7 @@
 //     Prediction p = await showGooglePlacesAutocomplete(
 //       context: context,
 //       location: location,
-//       apiKey: "AIzaSyBNlPmD46JwwYiU9LTw7pyHgUuV7sKTKF4",
+//       apiKey: "my_api_key",
 //       onError: (res) {
 //         homeScaffoldKey.currentState
 //             .showSnackBar(new SnackBar(content: new Text(res.errorMessage)));

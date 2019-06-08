@@ -225,7 +225,7 @@ abstract class GooglePlacesAutocompleteState
   void initState() {
     super.initState();
     query = new TextEditingController(text: "");
-    _places = new GoogleMapsPlaces(apiKey: 'AIzaSyBNlPmD46JwwYiU9LTw7pyHgUuV7sKTKF4');
+    _places = new GoogleMapsPlaces(apiKey: 'my_api_key');
     searching = false;
   }
 
